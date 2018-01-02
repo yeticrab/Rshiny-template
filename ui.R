@@ -28,6 +28,7 @@ header = dashboardHeader(
 sidebar = dashboardSidebar(
   ## menu items - one for each tab
   sidebarMenu(
+    menuItem("Data Input", tabName = "datainput"),    
     menuItem("Dashboard1", tabName = "dashboard1"),
     menuItem("Dashboard2", tabName = "dashboard2")
   ),
@@ -70,6 +71,7 @@ body = dashboardBody(
       verbatimTextOutput("rawtable"),
       downloadButton("downloadCsv", "Download as CSV")
     )
+    ,import_file_ui
   )
 )
 
